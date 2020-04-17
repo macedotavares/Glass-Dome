@@ -16,7 +16,7 @@ To use image and attachment functionality, you'll also need a (free) Dropbox acc
 
 [Download the workflow file](https://github.com/macedotavares/Glass-Dome/raw/master/Glass%20Dome.alfredworkflow), double-click on it and define the following two variables in the dialog that pops up:
 
-### Dropbox Token (db_token)
+**db_token** (Dropbox Token)
 
 Fill in "db_token" with your Dropbox authorization token. Go here:
 
@@ -24,7 +24,7 @@ https://www.dropbox.com/developers/apps?_ad=topbar4&_camp=myapps&_tk=pilot_lp
 
 Create an app (name it whatever you like) and generate a token.
 
-### Dropbox Folder (db_folder)
+**db_folder** (Dropbox Folder)
 
 This is the folder in which Glass Dome will place your uploaded files and images. If it doesn't exist, it will be automatically created on first use.
 
