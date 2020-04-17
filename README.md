@@ -47,4 +47,4 @@ Each of the three actions is triggered by a keyword (feel free to change those, 
 ## Comments or suggestions?
 
 Email: mail@senhortavares.com
-Twitter: [@senhortavares](https://twitter.com/home)
+Twitter: [@senhortavares](https://twitter.com/senhortavares)
