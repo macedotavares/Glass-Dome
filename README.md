@@ -1,6 +1,6 @@
 # About Glass Dome
 
-Inspired by Jeff Huang's [Designed to Last](https://jeffhuang.com/designed_to_last/), Glass Dome is an effort to prevent link rot inside my own notes.
+Inspired by Jeff Huang's [Designed to Last](https://jeffhuang.com/designed_to_last/), Glass Dome is an effort to prevent link rot inside markdown notes.
 
 It uses the Internet Archive's Wayback Machine and your own Dropbox account to preserve three kinds of link:
 
@@ -9,6 +9,8 @@ It uses the Internet Archive's Wayback Machine and your own Dropbox account to p
 - Other files
 
 ## Setup
+
+You need [Alfred](https://www.alfredapp.com) with its payed *Powerpack* to use this workflow. For years now, Alfred has been the single most important productivity app on all my macs, so I couldn't recommend it enough.
 
 ### Dropbox Token (db_token)
 
