@@ -592,7 +592,7 @@
 				<key>autopaste</key>
 				<false/>
 				<key>clipboardtext</key>
-				<string>[{var:title}]({var:url_current}) [⏳]({var:url_archived})</string>
+				<string>[{var:title}]({var:url_current}) [⟲]({var:url_archived})</string>
 				<key>transient</key>
 				<true/>
 			</dict>
@@ -611,7 +611,9 @@
 				<key>escaping</key>
 				<integer>63</integer>
 				<key>script</key>
-				<string>tell application "Safari" to set currentURL to the URL of the front documentreturn currentURL</string>
+				<string>tell application "Safari" to set currentURL to the URL of the front document
+
+return currentURL</string>
 				<key>scriptargtype</key>
 				<integer>0</integer>
 				<key>scriptfile</key>
@@ -659,7 +661,8 @@ curl http://web.archive.org/save/"$url"</string>
 				<key>escaping</key>
 				<integer>63</integer>
 				<key>script</key>
-				<string>tell application "Safari" to set theTitle to name of front documentreturn theTitle</string>
+				<string>tell application "Safari" to set theTitle to name of front document
+return theTitle</string>
 				<key>scriptargtype</key>
 				<integer>0</integer>
 				<key>scriptfile</key>
@@ -841,7 +844,7 @@ curl http://web.archive.org/save/"$url"</string>
 				<key>autopaste</key>
 				<false/>
 				<key>clipboardtext</key>
-				<string>[{var:url_current}]({var:url_current}) [⏳]({var:url_archived})</string>
+				<string>[{var:url_current}]({var:url_current}) [⟲]({var:url_archived})</string>
 				<key>transient</key>
 				<true/>
 			</dict>
