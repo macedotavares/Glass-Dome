@@ -40,6 +40,13 @@ Each of the three actions is triggered by a keyword (feel free to change those, 
 
 - gdf (File): Pretty much the same as the previous one, but for any other file type.
 
+Once the markdown link is in your clipboard, you can paste it anywhere you want.
+
+- Web links will be appended with a ⟲ icon, which you can click to visit the snapshot
+- Images will render inline (where supported, of course)
+- File links will link to the Dropbox copy of the original local file. (Bonus: those links won't break even if you move the file to another Dropbox folder.)
+
+
 ## A couple of warnings
 1. This is a very basic workflow put together in a day, with very limited programming knowledge. I made it for my own use, but then figured it might be useful to someone else. It's not elegantly crafted, and it won't be regularly maintained. It seems to work, though.
 2. I can't imagine how this workflow could break anything. But I may be wrong.
