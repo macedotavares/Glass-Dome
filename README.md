@@ -5,8 +5,8 @@ Inspired by Jeff Huang's [Designed to Last](https://jeffhuang.com/designed_to_la
 It uses the Internet Archive's Wayback Machine and your own Dropbox account to preserve three kinds of link:
 
 - Webpages
-- Images
-- Other files
+- Inline images
+- File attachments
 
 ## Setup
 
