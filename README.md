@@ -10,7 +10,7 @@ It uses the Internet Archive's Wayback Machine and your own Dropbox account to p
 
 ## Setup
 
-👉 You need [Alfred](https://www.alfredapp.com) with its payed *Powerpack* to use this workflow. For years now, Alfred has been the single most important productivity app on all my macs, so I couldn't recommend it enough.
+👉 You need [Alfred](https://www.alfredapp.com) with its paid *Powerpack* to use this workflow. For years now, Alfred has been the single most important productivity app on all my macs, so I couldn't recommend it enough.
 
 To use image and attachment functionality, you'll also need a (free) Dropbox account. The web archiving feature doesn't need anything and works out of the box.
 
