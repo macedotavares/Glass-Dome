@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>bundleid</key>
-	<string>com.senhortavares.com.glassdome</string>
+	<string>com.senhortavares.glassdome</string>
 	<key>connections</key>
 	<dict>
 		<key>00A93B67-8478-4A44-9C9E-F6564AC2B014</key>
@@ -173,6 +173,16 @@
 				<key>vitoclose</key>
 				<false/>
 			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>757EF8E8-B9B9-4833-8D46-08F32341ABA4</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
 		</array>
 		<key>44776EB1-6070-41BA-AD38-86D104187F30</key>
 		<array>
@@ -226,37 +236,11 @@
 				<false/>
 			</dict>
 		</array>
-		<key>64546B12-0369-4E4D-832F-99D3CF2A0144</key>
-		<array>
-			<dict>
-				<key>destinationuid</key>
-				<string>6ECB6CE6-D028-498D-8F3B-F9B4811B46B0</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-		</array>
 		<key>6DE3C56C-4FF6-46C3-9FB6-C4ED6843BD6B</key>
 		<array>
 			<dict>
 				<key>destinationuid</key>
 				<string>4DF64BB7-B491-4FAD-B325-D146545607E3</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-		</array>
-		<key>6ECB6CE6-D028-498D-8F3B-F9B4811B46B0</key>
-		<array>
-			<dict>
-				<key>destinationuid</key>
-				<string>F45AB046-1F9B-4D8F-9BB4-5224CCEAAEFE</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -410,7 +394,7 @@
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>64546B12-0369-4E4D-832F-99D3CF2A0144</string>
+				<string>F45AB046-1F9B-4D8F-9BB4-5224CCEAAEFE</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -485,18 +469,7 @@
 			</dict>
 		</array>
 		<key>D03CCE12-1A75-4C74-9967-4BFA2B666CB6</key>
-		<array>
-			<dict>
-				<key>destinationuid</key>
-				<string>757EF8E8-B9B9-4833-8D46-08F32341ABA4</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-		</array>
+		<array/>
 		<key>D4DCB517-9324-4347-96FB-D0FC47CE165E</key>
 		<array>
 			<dict>
@@ -577,7 +550,7 @@
 		</array>
 	</dict>
 	<key>createdby</key>
-	<string>Senhor Tavares</string>
+	<string>@senhortavares</string>
 	<key>description</key>
 	<string>Prevent link rot inside your Markdown notes</string>
 	<key>disabled</key>
@@ -589,31 +562,12 @@
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>autopaste</key>
-				<false/>
-				<key>clipboardtext</key>
-				<string>[{var:title}]({var:url_current}) [⟲]({var:url_archived})</string>
-				<key>transient</key>
-				<true/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.output.clipboard</string>
-			<key>uid</key>
-			<string>757EF8E8-B9B9-4833-8D46-08F32341ABA4</string>
-			<key>version</key>
-			<integer>3</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
 				<key>concurrently</key>
 				<false/>
 				<key>escaping</key>
 				<integer>63</integer>
 				<key>script</key>
-				<string>tell application "Safari" to set currentURL to the URL of the front document
-
-return currentURL</string>
+				<string>tell application "Safari" to set currentURL to the URL of the front documentreturn currentURL</string>
 				<key>scriptargtype</key>
 				<integer>0</integer>
 				<key>scriptfile</key>
@@ -661,8 +615,7 @@ curl http://web.archive.org/save/"$url"</string>
 				<key>escaping</key>
 				<integer>63</integer>
 				<key>script</key>
-				<string>tell application "Safari" to set theTitle to name of front document
-return theTitle</string>
+				<string>tell application "Safari" to set theTitle to name of front documentreturn theTitle</string>
 				<key>scriptargtype</key>
 				<integer>0</integer>
 				<key>scriptfile</key>
@@ -682,6 +635,8 @@ return theTitle</string>
 			<dict>
 				<key>argument</key>
 				<string>{var:url_current}</string>
+				<key>passthroughargument</key>
+				<false/>
 				<key>variables</key>
 				<dict>
 					<key>title</key>
@@ -713,6 +668,8 @@ return theTitle</string>
 			<dict>
 				<key>argument</key>
 				<string></string>
+				<key>passthroughargument</key>
+				<false/>
 				<key>variables</key>
 				<dict>
 					<key>url_archived</key>
@@ -744,23 +701,19 @@ return theTitle</string>
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>lastpathcomponent</key>
+				<key>autopaste</key>
 				<false/>
-				<key>onlyshowifquerypopulated</key>
-				<false/>
-				<key>removeextension</key>
-				<false/>
-				<key>text</key>
-				<string>Markdown link copied to clipboard.</string>
-				<key>title</key>
-				<string>✅ Snapshot created!</string>
+				<key>clipboardtext</key>
+				<string>[{var:title}]({var:url_current}) [⟲]({var:url_archived})</string>
+				<key>transient</key>
+				<true/>
 			</dict>
 			<key>type</key>
-			<string>alfred.workflow.output.notification</string>
+			<string>alfred.workflow.output.clipboard</string>
 			<key>uid</key>
-			<string>F45AB046-1F9B-4D8F-9BB4-5224CCEAAEFE</string>
+			<string>757EF8E8-B9B9-4833-8D46-08F32341ABA4</string>
 			<key>version</key>
-			<integer>1</integer>
+			<integer>3</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -786,27 +739,23 @@ return theTitle</string>
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>concurrently</key>
+				<key>lastpathcomponent</key>
 				<false/>
-				<key>escaping</key>
-				<integer>0</integer>
-				<key>script</key>
-				<string>url=$1
-
-curl http://web.archive.org/save/"$url"</string>
-				<key>scriptargtype</key>
-				<integer>1</integer>
-				<key>scriptfile</key>
-				<string></string>
-				<key>type</key>
-				<integer>0</integer>
+				<key>onlyshowifquerypopulated</key>
+				<false/>
+				<key>removeextension</key>
+				<false/>
+				<key>text</key>
+				<string>Markdown link copied to clipboard.</string>
+				<key>title</key>
+				<string>✅ Snapshot created!</string>
 			</dict>
 			<key>type</key>
-			<string>alfred.workflow.action.script</string>
+			<string>alfred.workflow.output.notification</string>
 			<key>uid</key>
-			<string>64546B12-0369-4E4D-832F-99D3CF2A0144</string>
+			<string>F45AB046-1F9B-4D8F-9BB4-5224CCEAAEFE</string>
 			<key>version</key>
-			<integer>2</integer>
+			<integer>1</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -841,25 +790,10 @@ curl http://web.archive.org/save/"$url"</string>
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>autopaste</key>
-				<false/>
-				<key>clipboardtext</key>
-				<string>[{var:url_current}]({var:url_current}) [⟲]({var:url_archived})</string>
-				<key>transient</key>
-				<true/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.output.clipboard</string>
-			<key>uid</key>
-			<string>6ECB6CE6-D028-498D-8F3B-F9B4811B46B0</string>
-			<key>version</key>
-			<integer>3</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
 				<key>argument</key>
 				<string>{query}</string>
+				<key>passthroughargument</key>
+				<false/>
 				<key>variables</key>
 				<dict>
 					<key>url_archived</key>
@@ -970,6 +904,8 @@ return thePaths</string>
 			<dict>
 				<key>argument</key>
 				<string>[{var:description}]({query})</string>
+				<key>passthroughargument</key>
+				<false/>
 				<key>variables</key>
 				<dict/>
 			</dict>
@@ -1015,6 +951,8 @@ return thePaths</string>
 			<dict>
 				<key>argument</key>
 				<string>"""{var:path}""" {var:db_token} """{var:db_folder}"""</string>
+				<key>passthroughargument</key>
+				<false/>
 				<key>variables</key>
 				<dict>
 					<key>filename</key>
@@ -1033,6 +971,8 @@ return thePaths</string>
 			<dict>
 				<key>argument</key>
 				<string>{query}</string>
+				<key>passthroughargument</key>
+				<false/>
 				<key>variables</key>
 				<dict>
 					<key>path</key>
@@ -1085,6 +1025,8 @@ return thePaths</string>
 			<dict>
 				<key>argument</key>
 				<string></string>
+				<key>passthroughargument</key>
+				<false/>
 				<key>variables</key>
 				<dict>
 					<key>description</key>
@@ -1123,7 +1065,7 @@ return thePaths</string>
 				<key>text</key>
 				<string>Dropbox link copied to Clipboard</string>
 				<key>title</key>
-				<string>File copied to Dropbox</string>
+				<string>✅ File copied to Dropbox</string>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.output.notification</string>
@@ -1154,6 +1096,8 @@ return thePaths</string>
 			<dict>
 				<key>argument</key>
 				<string>[{var:filename}]({query})</string>
+				<key>passthroughargument</key>
+				<false/>
 				<key>variables</key>
 				<dict/>
 			</dict>
@@ -1186,6 +1130,8 @@ return thePaths</string>
 			<dict>
 				<key>argument</key>
 				<string>![{var:description}]({query})</string>
+				<key>passthroughargument</key>
+				<false/>
 				<key>variables</key>
 				<dict/>
 			</dict>
@@ -1304,6 +1250,8 @@ return thePaths</string>
 			<dict>
 				<key>argument</key>
 				<string></string>
+				<key>passthroughargument</key>
+				<false/>
 				<key>variables</key>
 				<dict>
 					<key>description</key>
@@ -1335,6 +1283,8 @@ return thePaths</string>
 			<dict>
 				<key>argument</key>
 				<string>{query}</string>
+				<key>passthroughargument</key>
+				<false/>
 				<key>variables</key>
 				<dict>
 					<key>path</key>
@@ -1374,6 +1324,8 @@ return thePaths</string>
 			<dict>
 				<key>argument</key>
 				<string>"""{var:path}""" {var:db_token} """{var:db_folder}"""</string>
+				<key>passthroughargument</key>
+				<false/>
 				<key>variables</key>
 				<dict>
 					<key>filename</key>
@@ -1443,6 +1395,8 @@ return thePaths</string>
 			<dict>
 				<key>argument</key>
 				<string>![{var:filename}]({query})</string>
+				<key>passthroughargument</key>
+				<false/>
 				<key>variables</key>
 				<dict/>
 			</dict>
@@ -1457,7 +1411,7 @@ return thePaths</string>
 	<key>readme</key>
 	<string># About Glass Dome
 
-Inspired by Jeff Huang's [Designed to Last](https://jeffhuang.com/designed_to_last/), Glass Dome is an effort to prevent link rot inside my own notes.
+Inspired by Jeff Huang's [Designed to Last](https://jeffhuang.com/designed_to_last/), Glass Dome is an effort to prevent link rot inside markdown notes.
 
 It uses the Internet Archive's Wayback Machine and your own Dropbox account to preserve three kinds of link:
 
@@ -1467,7 +1421,13 @@ It uses the Internet Archive's Wayback Machine and your own Dropbox account to p
 
 ## Setup
 
-### Dropbox Token (db_token)
+👉 You need [Alfred](https://www.alfredapp.com) with its payed *Powerpack* to use this workflow. For years now, Alfred has been the single most important productivity app on all my macs, so I couldn't recommend it enough.
+
+To use image and attachment functionality, you'll also need a (free) Dropbox account. The web archiving feature doesn't need anything and works out of the box.
+
+[Download the workflow file](https://github.com/macedotavares/Glass-Dome/raw/master/Glass%20Dome.alfredworkflow), double-click on it and define the following two variables in the dialog that pops up:
+
+**db_token** (Dropbox Token)
 
 Fill in "db_token" with your Dropbox authorization token. Go here:
 
@@ -1475,7 +1435,7 @@ https://www.dropbox.com/developers/apps?_ad=topbar4&amp;_camp=myapps&amp;_tk=pil
 
 Create an app (name it whatever you like) and generate a token.
 
-### Dropbox Folder (db_folder)
+**db_folder** (Dropbox Folder)
 
 This is the folder in which Glass Dome will place your uploaded files and images. If it doesn't exist, it will be automatically created on first use.
 
@@ -1498,15 +1458,16 @@ Each of the three actions is triggered by a keyword (feel free to change those, 
 ## Comments or suggestions?
 
 Email: mail@senhortavares.com
-Twitter: @senhortavares</string>
+
+Twitter: [@senhortavares](https://twitter.com/senhortavares)</string>
 	<key>uidata</key>
 	<dict>
 		<key>00A93B67-8478-4A44-9C9E-F6564AC2B014</key>
 		<dict>
 			<key>xpos</key>
-			<integer>455</integer>
+			<integer>435</integer>
 			<key>ypos</key>
-			<integer>65</integer>
+			<integer>55</integer>
 		</dict>
 		<key>08B5DBF9-2AAF-4C44-AF66-BAEB910F5A93</key>
 		<dict>
@@ -1583,14 +1544,14 @@ Twitter: @senhortavares</string>
 			<key>xpos</key>
 			<integer>815</integer>
 			<key>ypos</key>
-			<integer>65</integer>
+			<integer>55</integer>
 		</dict>
 		<key>3C21B1F1-C5EE-4A98-B925-20FA6124CA6D</key>
 		<dict>
 			<key>xpos</key>
 			<integer>1065</integer>
 			<key>ypos</key>
-			<integer>95</integer>
+			<integer>85</integer>
 		</dict>
 		<key>44776EB1-6070-41BA-AD38-86D104187F30</key>
 		<dict>
@@ -1611,7 +1572,7 @@ Twitter: @senhortavares</string>
 			<key>xpos</key>
 			<integer>705</integer>
 			<key>ypos</key>
-			<integer>95</integer>
+			<integer>85</integer>
 		</dict>
 		<key>52010B8F-9761-451E-93ED-B5540FE90410</key>
 		<dict>
@@ -1620,26 +1581,12 @@ Twitter: @senhortavares</string>
 			<key>ypos</key>
 			<integer>1145</integer>
 		</dict>
-		<key>64546B12-0369-4E4D-832F-99D3CF2A0144</key>
-		<dict>
-			<key>xpos</key>
-			<integer>1185</integer>
-			<key>ypos</key>
-			<integer>260</integer>
-		</dict>
 		<key>6DE3C56C-4FF6-46C3-9FB6-C4ED6843BD6B</key>
 		<dict>
 			<key>xpos</key>
-			<integer>620</integer>
+			<integer>615</integer>
 			<key>ypos</key>
-			<integer>95</integer>
-		</dict>
-		<key>6ECB6CE6-D028-498D-8F3B-F9B4811B46B0</key>
-		<dict>
-			<key>xpos</key>
-			<integer>1525</integer>
-			<key>ypos</key>
-			<integer>275</integer>
+			<integer>85</integer>
 		</dict>
 		<key>752756EA-1D9B-4712-B0EE-45387A836086</key>
 		<dict>
@@ -1651,9 +1598,9 @@ Twitter: @senhortavares</string>
 		<key>757EF8E8-B9B9-4833-8D46-08F32341ABA4</key>
 		<dict>
 			<key>xpos</key>
-			<integer>1520</integer>
+			<integer>1180</integer>
 			<key>ypos</key>
-			<integer>55</integer>
+			<integer>185</integer>
 		</dict>
 		<key>882BE9D3-6CCD-4154-A642-607BAA21105D</key>
 		<dict>
@@ -1707,9 +1654,9 @@ Twitter: @senhortavares</string>
 		<key>B0709BEC-0CB9-44CE-8BE2-BCAD0E0D6776</key>
 		<dict>
 			<key>xpos</key>
-			<integer>455</integer>
+			<integer>500</integer>
 			<key>ypos</key>
-			<integer>290</integer>
+			<integer>285</integer>
 		</dict>
 		<key>B169F298-6F07-4FED-B565-BCE5C1E06566</key>
 		<dict>
@@ -1737,7 +1684,7 @@ Twitter: @senhortavares</string>
 			<key>xpos</key>
 			<integer>975</integer>
 			<key>ypos</key>
-			<integer>95</integer>
+			<integer>85</integer>
 		</dict>
 		<key>CA38E072-0FD7-4897-A89E-AC0514D56B4A</key>
 		<dict>
@@ -1758,7 +1705,7 @@ Twitter: @senhortavares</string>
 			<key>xpos</key>
 			<integer>1175</integer>
 			<key>ypos</key>
-			<integer>65</integer>
+			<integer>55</integer>
 		</dict>
 		<key>D4DCB517-9324-4347-96FB-D0FC47CE165E</key>
 		<dict>
@@ -1798,9 +1745,9 @@ Twitter: @senhortavares</string>
 		<key>F45AB046-1F9B-4D8F-9BB4-5224CCEAAEFE</key>
 		<dict>
 			<key>xpos</key>
-			<integer>1840</integer>
+			<integer>1770</integer>
 			<key>ypos</key>
-			<integer>220</integer>
+			<integer>250</integer>
 		</dict>
 		<key>F7529757-668D-4882-BD92-700735DD0CD0</key>
 		<dict>
@@ -1813,9 +1760,9 @@ Twitter: @senhortavares</string>
 	<key>variables</key>
 	<dict>
 		<key>db_folder</key>
-		<string></string>
+		<string>Glass Dome</string>
 		<key>db_token</key>
-		<string></string>
+		<string>p8y_rEAMUMoAAAAAAAIDl41kMZ_7NPdWHdiWy0eJcU9EKkVdkuIiQF_eFtJ5EIF9</string>
 	</dict>
 	<key>variablesdontexport</key>
 	<array>
@@ -1823,7 +1770,7 @@ Twitter: @senhortavares</string>
 		<string>db_token</string>
 	</array>
 	<key>version</key>
-	<string>1.0.0</string>
+	<string>1.1.0</string>
 	<key>webaddress</key>
 	<string>senhortavares.com</string>
 </dict>
