@@ -2,7 +2,7 @@
 
 Inspired by Jeff Huang's [Designed to Last](https://jeffhuang.com/designed_to_last/), Glass Dome is an effort to prevent link rot inside markdown notes.
 
-It uses the Internet Archive's Wayback Machine and your own Dropbox account to preserve three kinds of link:
+It uses Archive.is and your own Dropbox account to preserve three kinds of link:
 
 - Webpages
 - Inline images
@@ -34,7 +34,7 @@ Files are never overwritten: they are timestamped to the second, and the API cal
 
 Each of the three actions is triggered by a keyword (feel free to change those, by the way).
 
-- gdw (Webpage): It creates Wayback Machine snapshots of any URL passed to it and returns markdown links for both live and saved versions. If no URL is passed, it tries to detect the frontmost Safari tab.
+- gdw (Webpage): It creates Archive.is snapshots of any URL passed to it. It also saves a self-contained html file to Dropbox and returns markdown links for both live and saved versions. If no URL is passed, it tries to detect the frontmost Safari tab.
 
 - gdi (Image): Gets selected image file (in Finder) and copies it to a folder in Dropbox (you have to set in the workflow's Environment Variables). Then, it returns a markdown image link to that file. You can pass it an optional description that will be used as alt-text.
 
@@ -42,7 +42,7 @@ Each of the three actions is triggered by a keyword (feel free to change those, 
 
 Once the markdown link is in your clipboard, you can paste it anywhere you want.
 
-- Web links will be appended with a ⟲ icon, which you can click to visit the snapshot
+- Web links will be appended with a ⟲ icon, which you can click to visit the snapshot, and a ❐ for the self-contained html.
 - Images will render inline (where supported, of course)
 - File links will link to the Dropbox copy of the original local file. (Bonus: those links won't break even if you move the file to another Dropbox folder.)
 
@@ -54,5 +54,5 @@ Once the markdown link is in your clipboard, you can paste it anywhere you want.
 ## Comments or suggestions?
 
 Email: mail@senhortavares.com
-
+Obsidian Forum: [macedotavares](https://forum.obsidian.md/u/macedotavares/summary)
 Twitter: [@senhortavares](https://twitter.com/senhortavares)
